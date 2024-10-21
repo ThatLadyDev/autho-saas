@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserType extends Model
 {
-    protected $fillable = ['name'];
+    protected $fillable = ['uuid', 'name'];
 
     public function users()
     {
