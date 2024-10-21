@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\UserType;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -13,9 +14,9 @@ class UserTypeSeeder extends Seeder
      */
     public function run(): void
     {
-        UserType::create(['name' => 'Admin']);
-        UserType::create(['name' => 'Regular']);
-        UserType::create(['name' => 'Billing']);
-        UserType::create(['name' => 'Support']);
+        UserType::create(['uuid' => Str::uuid(), 'name' => 'Admin']);
+        UserType::create(['uuid' => Str::uuid(), 'name' => 'Regular']);
+        UserType::create(['uuid' => Str::uuid(), 'name' => 'Billing']);
+        UserType::create(['uuid' => Str::uuid(), 'name' => 'Support']);
     }
 }
